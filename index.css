@@ -1,0 +1,243 @@
+/* Much of this was loaned from https://github.com/jeffreydivi/VoteyMcVotespace/ */
+
+:root {
+    --tint: #000;
+    --tint-commit: #44bb44;
+    --tint-deassert: #444;
+    --off-white: #ddd;
+    --barely-white: #eee;
+    --white: #fff;
+    --black: #000;
+    --max-width: 512px;
+    --border-radius: 5px;
+}
+
+* {
+    transition: opacity 0.15s fade-in-out;
+    transition: background 0.15s fade-in-out;
+}
+
+html, textarea {
+    font-family: Roboto, sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    margin-top: 80px;
+    background: var(--white);
+    color: var(--black);
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+nav {
+    width: calc(100vw - 40px);
+    background: var(--tint);
+    color: white;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    padding: 0 20px;
+    z-index: 1963;
+}
+
+nav > div {
+    max-width: calc(var(--max-width) + 40px);
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+nav > div > .left > * {
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--tint);
+}
+
+button, input {
+    border: none;
+    font-size: 16px;
+    border-radius: var(--border-radius);
+    padding: 7px;
+}
+
+input[type="text"], input[type="password"] {
+    width: calc(100% - 14px);
+}
+
+button, input[type="submit"] {
+    background: var(--tint);
+    color: white;
+    cursor: pointer;
+    width: calc(100% - 14px);
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 7px;
+    margin-left: 7px;
+}
+
+input, textarea {
+    border-radius: var(--border-radius);
+    background: var(--off-white);
+    color: var(--black);
+    margin: 7px;
+}
+
+textarea {
+    width: calc(100% - 14px);
+}
+
+button:hover, a:hover {
+    opacity: 0.8;
+}
+
+button:active, a:active {
+    opacity: 0.6;
+}
+
+.logo {
+    height: 30px;
+    filter: invert();
+}
+
+.err {
+    color: #dd2323;
+}
+
+.flag {
+    text-align: center;
+    font-size: 28px;
+    font-family: monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --off-white: #444;
+        --barely-white: #333;
+        --white: #222;
+        --black: #fff;
+    }
+}
+
+/* Exported asset */
+#capture_twtr {
+    width: 972px;
+    height: 466px;
+    background: #231F20;
+    padding: 40px;
+    font-family: "Roboto", sans-serif;
+}
+#capture_twtr > .title {
+    font-size: 50px;
+}
+#capture_twtr > .title.two {
+    margin-top: -10px;
+}
+#capture_twtr > .sub {
+    text-align: right;
+    right: 7px;
+    top: -56px;
+    position: relative;
+    font-size: 32px;
+    opacity: 50%;
+    color: white;
+}
+#capture_twtr > .sub.two {
+    right: -240px;
+    width: calc(100% - 230px);
+}
+#capture_twtr > .body {
+    position: relative;
+    top: -30px;
+    width: 72%;
+    font-size: 32px;
+    height: 150px;
+    line-height: 1.5;
+}
+#capture_twtr > .image {
+    position: relative;
+    float: right;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 150px;
+    border-radius: 20px;
+    right: 14px;
+    top: -200px;
+}
+#capture_twtr > svg {
+    position: relative;
+    top: -60px;
+    left: -10px;
+}
+span {
+    color: #D2990B;
+}
+
+#capture_insta {
+    width: 466px;
+    height: 466px;
+    background: #231F20;
+    padding: 40px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    display: none;
+}
+.header {
+    background: #000;
+    color: #fff;
+    margin: -40px;
+    margin-bottom: 20px;
+    padding: 10px 30px 21px;
+    width: 486px;
+    text-align: center;
+}
+.header > h1 > svg {
+    position: relative;
+    top: 15px;
+    transform: scale(94%);
+}
+#capture_insta > .title {
+    font-size: 28px;
+}
+#capture_insta > .sub {
+    opacity: 50%;
+    color: white;
+    font-size: 18px;
+}
+#capture_insta > .body {
+    font-size: 20px;
+    margin: 10px;
+}
+#capture_insta > .image {
+    margin: auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 125px;
+    height: 75px;
+    border-radius: 20px;
+}
