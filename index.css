@@ -145,7 +145,7 @@ button:active, a:active {
 #capture_twtr {
     width: 972px;
     height: 466px;
-    background: #231F20;
+    background: #1c1c1c;
     padding: 40px;
     font-family: "Roboto", sans-serif;
 }
@@ -200,7 +200,7 @@ span {
 #capture_insta {
     width: 466px;
     height: 466px;
-    background: #231F20;
+    background: #1c1c1c;
     padding: 40px;
     font-family: "Roboto", sans-serif;
     text-align: center;
